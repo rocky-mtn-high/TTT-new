@@ -1,3 +1,6 @@
+package src;
+
+import java.awt.*;
 
 public class BoardSquare {
     private boolean isOccupied;
@@ -34,6 +37,13 @@ public class BoardSquare {
 
     public void setSymbol(char symbol) {
         this.symbol = symbol;
+    }
+
+    public void paintSquare(Graphics g, int x, int y, int size) {
+        g.setColor(Color.BLACK);
+        g.drawRect(x, y, size, size);
+        g.setColor(Color.WHITE);
+        g.fillRect(x, y, size, size);
     }
 
 }
